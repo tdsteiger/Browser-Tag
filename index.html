@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>Infection Tag</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="static/css/game.css">
+	</head>
+	<body>
+		<main>
+			<div class="loader"></div>
+		</main>
+		<aside>
+			<div class="header">
+				<ul class="counts"></ul>
+			</div>
+			<div class="panel">
+				<h2>Your Move:</h2>
+				<div id="move">
+					<div class="if">
+						<div class="logic">
+							<div class="condition">
+								<select class="neighbor">
+									<option value="WALL">a wall</option>
+									<option value="EMPTY">nothing</option>
+									<option value="SAME">a teammate</option>
+									<option value="OTHER">an opponent</option>
+								</select>
+								<select class="operator">
+									<option value="==">is</option>
+									<option value="!=">is not</option>
+								</select>
+								<select class="look">
+									<option value="Front">in front</option>
+									<option value="Left">to the left</option>
+									<option value="Back">behind</option>
+									<option value="Right">to the right</option>
+								</select>
+							</div>
+							<select class="return">
+								<option value="STAY">Stay</option>
+								<option value="HOP">Hop</option>
+								<option value="LEFT">Turn left</option>
+								<option value="RIGHT">Turn right</option>
+								<option value="INFECT">Tag!</option>
+							</select>
+
+							<div class="add">+</div>
+
+							<div class="else">
+								<div class="logic">
+									<select class="return">
+										<option value="STAY">Stay</option>
+										<option value="HOP">Hop</option>
+										<option value="LEFT">Turn left</option>
+										<option value="RIGHT">Turn right</option>
+										<option value="INFECT">Tag!</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<ul class="actions">
+					<li><button id="start">Start ▶</button></li>
+					<li><button id="stop">Stop ◼</button></li>
+					<li><button id="reset">Reset ↺</button></li>
+				</ul>
+			</div>
+		</aside>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="static/js/game.js" async></script>
+	</body>
+</html>
